@@ -1,0 +1,103 @@
+{% extends '_base.html' %}
+{% block nav %}
+    <!--Main Navigation-->
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+        <div class="position-sticky">
+            <div class="list-group list-group-flush mx-3 mt-4">
+                <!-- Collapse 1 -->
+                <a
+                        class="list-group-item list-group-item-action py-2 ripple"
+                        aria-current="true"
+                        data-mdb-toggle="collapse"
+                        href="#collapseExample1"
+                        aria-expanded="true"
+                        aria-controls="collapseExample1"
+                >
+                    <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Options</span>
+                </a>
+                <!-- Collapsed content -->
+                <ul id="collapseExample1" class="collapse list-group list-group-flush">
+                    <li class="list-group-item py-1">
+                        <a href="" class="text-reset">Link</a>
+                    </li>
+                    <li class="list-group-item py-1">
+                        <a href="" class="text-reset">Link</a>
+                    </li>
+                    <li class="list-group-item py-1">
+                        <a href="" class="text-reset">Link</a>
+                    </li>
+                    <li class="list-group-item py-1">
+                        <a href="" class="text-reset">Links</a>
+                    </li>
+                </ul>
+                <!-- Collapse 1 -->
+
+
+            </div>
+            <div class="list-group list-group-flush mx-3 mt-4">
+                <div class="form-outline my-2">
+                    <input id="siteNameField" type="text" id="form14" class="form-control"/>
+                    <label class="form-label" for="form14">Name</label>
+                </div>
+                <div class="form-outline my-2">
+                    <input id="latitudeField" type="text" id="form14" class="form-control"/>
+                    <label class="form-label" for="form14">Latitude</label>
+                </div>
+
+                <div class="form-outline my-2">
+                    <input id="longitudeField" type="text" id="form14" class="form-control"/>
+                    <label class="form-label" for="form14">Longitude</label>
+                </div>
+
+                <button id="addSiteButton" class="btn btn-outline-secondary">Add Site</button>
+            </div>
+            <hr class="hr"/>
+            <hr class="hr"/>
+            <div class="list-group mx-3 mt-4">
+                <h4>Sites</h4>
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar -->
+
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Toggle button -->
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#sidebarMenu"
+                    aria-controls="sidebarMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+            >
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <span>Way Mapper</span>
+            </a>
+            <!-- Search form -->
+            <form class="d-none d-md-flex input-group w-auto my-auto">
+                <input
+                        autocomplete="off"
+                        type="search"
+                        class="form-control rounded"
+                        placeholder='Search For A site'
+                        style="min-width: 225px;"
+                />
+                <span class="input-group-text border-0"><i class="fas fa-search"></i></span>
+            </form>
+
+
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+{% endblock nav %}

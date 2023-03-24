@@ -139,9 +139,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+STATIC_ROOT = 'static-root/'
 STATIC_URL = "static/"
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (26.3207, 50.0888),
+    'DEFAULT_ZOOM_CONTROL': False,
+    'DEFAULT_ZOOM': 10,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 18,
+    'DEFAULT_PRECISION': 6,
+    'ATTRIBUTION_PREFIX': 'Powered by django | Developed By Wajahat Ahmad',
+    'MINIMAP': True,
+    'RESET_VIEW': False,
+}
